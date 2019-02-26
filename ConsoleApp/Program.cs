@@ -118,7 +118,7 @@ namespace ConsoleApp
 
                 foreach (string key in dictWordList.Keys)
                 {
-                    xmlWriter.WriteStartElement("user");
+                    xmlWriter.WriteStartElement("word");
                     xmlWriter.WriteAttributeString("text", key);
                     xmlWriter.WriteAttributeString("count", dictWordList[key].ToString());
                     xmlWriter.WriteEndElement();

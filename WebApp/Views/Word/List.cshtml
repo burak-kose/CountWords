@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Text</th>
+            <th scope="col">Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.szError != null && ViewBag.szError != "")
+        {
+            <tr>
+                <td>Error occured</td>
+                <td>@ViewBag.szError</td>
+            </tr>
+        }
+        else
+        {
+            foreach (var word in ViewBag.listWords)
+            {
+                <tr>
+                    <td>@word.szText</td>
+                    <td>@word.iCount</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
